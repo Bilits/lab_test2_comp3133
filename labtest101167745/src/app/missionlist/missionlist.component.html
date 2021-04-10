@@ -1,0 +1,13 @@
+<div class="card-group" *ngFor="let mission of missions; let i = index">
+  <div class="card">
+    <img src="{{mission.links.mission_patch_small}}" alt="Card image cap" width="100px" height="100px" style="padding: 20px 0px 0px 15px;">
+    <div class="card-body">
+      <h5 class="card-title">{{mission.mission_name}}</h5>
+      <p class="card-text">{{mission.details}}</p>
+      <button type="button" routerLink="missiondetails" class="btn btn-primary" (click)="goToDetails(mission.flight_number)">Details</button>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Year: {{mission.launch_year}}</small>
+    </div>
+  </div>
+</div>
